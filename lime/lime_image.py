@@ -43,7 +43,7 @@ class ImageExplanation(object):
             skimage.segmentation.mark_boundaries
         """
         if label not in self.local_exp:
-            raise 'Label not in explanation'
+            raise KeyError('Label not in explanation')
         segments = self.segments
         image = self.image
         exp = self.local_exp[label]
@@ -169,6 +169,8 @@ class LimeImageExplainer(object):
                     np.mean(image[segments == x][:, 2]))
         else:
             fudged_image[:] = hide_color
+
+        top = labels
 
         data, labels = self.data_labels(image, fudged_image, segments,
                                         classifier_fn, num_samples,
