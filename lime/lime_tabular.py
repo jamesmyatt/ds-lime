@@ -138,7 +138,6 @@ class LimeTabularExplainer(object):
                 are 'quartile', 'decile' or 'entropy'
         """
         self.mode = mode
-        self.feature_names = list(feature_names)
         self.categorical_names = categorical_names
         self.categorical_features = categorical_features
         if self.categorical_names is None:
@@ -147,6 +146,7 @@ class LimeTabularExplainer(object):
             self.categorical_features = []
         if self.feature_names is None:
             self.feature_names = [str(i) for i in range(training_data.shape[1])]
+        self.feature_names = list(feature_names)
 
         self.discretizer = None
         if discretize_continuous:
