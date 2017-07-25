@@ -145,8 +145,8 @@ class LimeTabularExplainer(object):
         if self.categorical_features is None:
             self.categorical_features = []
         if feature_names is None:
-            self.feature_names = [str(i) for i in range(training_data.shape[1])]
-        self.feature_names = list(self.feature_names)
+            feature_names = [str(i) for i in range(training_data.shape[1])]
+        self.feature_names = list(feature_names)
 
         self.discretizer = None
         if discretize_continuous:
