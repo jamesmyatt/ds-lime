@@ -1,6 +1,6 @@
 # lime
 
-[![Build Status](https://travis-ci.org/marcotcr/lime.svg?branch=master)](https://travis-ci.org/marcotcr/lime)
+[![Build Status](https://travis-ci.org/datascienceinc/lime.svg?branch=master)](https://travis-ci.org/marcotcr/lime)
 
 This project is about explaining what machine learning classifiers (or models) are doing.
 At the moment, we support explaining individual predictions for text classifiers or classifiers that act on tables (numpy arrays of numerical or categorical data), with a package called lime (short for local interpretable model-agnostic explanations).
